@@ -1,0 +1,4 @@
+export const FETCH_PRODUCTS = "FETCH_PRODUCTS";
+export const SAVE_PRODUCTS = "SAVE_PRODUCTS";
+export const START_LOADING="START_LOADING";
+export const STOP_LOADING="STOP_LOADING";
