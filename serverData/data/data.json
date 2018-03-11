@@ -6,7 +6,8 @@
         "rating": 1.5,
         "price": 7250,
         "emiPrice": 352,
-        "itemImage": "require('../image/cam1.png')",
+      
+         "itemImage": "../resources/cam6.jpg",
         "features": "['20.1 MP','Sensor type CCD','LCD size 2.7','Lithium Battery']"
     },
     {
