@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Tile from './Tile';
 import _ from 'lodash';
 import SearchBox from './SearchBox';
+import FilterBox from './FilterBox';
 
 export default class home extends React.PureComponent {
   constructor() {
@@ -73,10 +74,7 @@ export default class home extends React.PureComponent {
 
 
   render() {
-
-    console.log(this.props);
     const  products  = this.state.data;
-    console.log('products', products);
     return (
       <div>
         <div className="container">
@@ -85,44 +83,14 @@ export default class home extends React.PureComponent {
 
           <hr />
 
-          <div className="filter-container">
-            <div className="filter-box">
-
-              <div style={{ float: 'right' }} onClick={this.onSorting}>
-                  <label>
-                    <input type="radio" name="selection" value ="None"/>
-                    None
-                   </label>
-
-                  <label>
-                    <input type="radio" name="selection" value ="High Price"/>
-                    High Price
-                   </label>
-
-                  <label>
-                    <input type="radio" name="selection" value ="Low Price" />
-                    Low Price
-                    </label>
-
-                  <label>
-                    <input type="radio" name="selection" value ="New" />
-                    New
-                   </label>
-              </div>
-
-            </div>
-          </div>
-
+          <FilterBox onSorting={this.onSorting}/>
 
           <div className="product-container">
             <div className="product-container-inner">
-
               {
                 _.map(products, (item ) => <Tile key={item.itemId} url={item.itemImage} title={item.itemTitle} price={item.price}
                   emiPrice={item.emiPrice} features={item.features.split(',')} rating={item.rating}/>
-                )}
-             
-
+                )}            
             </div>
           </div>
 

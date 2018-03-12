@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import * as Constants from '../common/constants';
 import _ from 'lodash';
 import Tile from './Tile';
 
@@ -18,7 +17,7 @@ export default class SearchResultsPage extends React.Component {
         console.log('props in searchPage', this.props)
         let query = this.props.match.params.query;
         let data = _.filter(this.props.products.products, (item) => item.itemTitle.toLowerCase().includes(query.toLowerCase()) ||
-            item.features.toLowerCase().includes(query.toLowerCase()));
+                            item.features.toLowerCase().includes(query.toLowerCase()));
         this.setState({ data });
     }
 

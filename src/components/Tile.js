@@ -18,7 +18,7 @@ export default function Tile({ url, title, price, emiPrice, features, rating }) 
         <div className="rating-container">
           <div className="rating-box"> {_.map(arr, ((item, i) => {
             ratingUrl = i <= length - 1 ? '../src/image/fullStar.png' : decimal && i == length ? '../src/image/halfStar.png' : '../src/image/star.png'
-            return <img src={ratingUrl} className="rating-image" width='20px' height='20px' />
+            return <img key={i} src={ratingUrl} className="rating-image" width='20px' height='20px' />
           }))
           } </div>
         </div>

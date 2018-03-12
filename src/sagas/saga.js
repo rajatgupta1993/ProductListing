@@ -11,16 +11,9 @@ export function* fetchProducts() {
   yield put(saveProducts(data));
 }
 
-// export function* searchMovie(action) {
-//   yield put(startLoading());
-//   let data = yield call(api.searchMovie,action.data);
-//   yield put(stopLoading());
-//   yield put(saveSearchResults(data));
-// }
 
 export function* watchActions() {
   yield takeEvery(actions.FETCH_PRODUCTS, fetchProducts);
-//   yield takeEvery(actions.SEARCH_MOVIE, searchMovie);
 }
 
 export default function* rootSaga() {
