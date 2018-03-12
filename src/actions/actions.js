@@ -13,6 +13,13 @@ export function saveProducts(data){
     };
 }
 
+export function searchProducts(data){
+    return{
+        type: actionTypes.SAVE_PRODUCTS,
+        data
+    };
+}
+
 export function startLoading(){
     return {
         type: actionTypes.START_LOADING,
