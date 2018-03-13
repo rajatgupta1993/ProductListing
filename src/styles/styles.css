@@ -44,6 +44,10 @@
     padding-left: 20px
 }
 
+.search-box input:focus{
+    outline: none;
+}
+
 .search-icon{
     font-size: 20px;
     cursor: pointer;
@@ -59,7 +63,7 @@ hr{
 .filter-box{
     float: right;
     height: 60px;
-    margin-top: -20px;
+    margin-top: -30px;
 
 }
 .filter-box label{
@@ -68,16 +72,20 @@ hr{
 }
 
 .filter-box label{
-    padding: 19px
+    padding: 19px;
+    display: table-cell;
 }
 
 .filter-box input{
     margin-right: 5px;
+    width: 25px;
+    vertical-align: bottom;
+    height: 25px;
 }
 
 .product-container{
     width: 100%;
-    padding: 20px 0px;
+   
 }
 
 .product-container-inner{
@@ -93,6 +101,12 @@ hr{
     border: 1px solid #999;
     border-radius: 5px;
 }
+
+.tiles:hover{
+        transform: scale(1.02);
+        transition: all .3s easy   
+}
+
 
 .tiles:nth-child(3n){
     float: left;    
@@ -127,4 +141,58 @@ hr{
 
 ul{
     padding-left:20px
+}
+
+@media only screen and (max-width: 1460px) {
+   .tiles{
+        height:580px;
+       
+    }
+   
+}
+
+@media only screen and (max-width: 1200px) {
+   .tiles{
+        width:48%;
+        height:580px;
+        margin-top:30px; 
+        background-color: white;
+        border: 1px solid #999;
+        border-radius: 5px;
+    }
+    .tiles:nth-child(2n){
+        float: right;  
+        margin-right: 0px ;
+    }
+
+    .tiles:nth-child(2n+1){
+        float: left;    
+        margin-right: 2%  
+    }
+    .search-box input{
+    
+        width: 70%;
+    
+    }
+}
+
+@media only screen and (max-width: 864px) {
+   .tiles{  
+    height:600px;
+}
+    .search-box input{
+    width: 70%;  
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+   .tiles{
+    width:99%;
+    height:560px;
+    margin-top:30px; 
+    background-color: white;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
 }

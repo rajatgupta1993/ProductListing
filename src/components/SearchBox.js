@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 export default function SearchBox({ searchText, onValueChange, onSearchClicked }) {
 
     return (
-
         <div className="searchContainer">
             <div className="search-box-container">
                 <div className="search-box">
@@ -15,7 +14,6 @@ export default function SearchBox({ searchText, onValueChange, onSearchClicked }
                     </form>
                 </div>
             </div>
-
         </div>);
 }
 

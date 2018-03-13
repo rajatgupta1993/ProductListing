@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchProducts, searchProducts } from '../actions/actions';
 
 import SearchResultsPage from './../components/SearchResultsPage';
 

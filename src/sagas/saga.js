@@ -6,7 +6,6 @@ import * as api from '../common/api';
 export function* fetchProducts() {
   yield put(startLoading());
   let data = yield call(api.getProducts);
-  console.log('data', data);
   yield put(stopLoading());
   yield put(saveProducts(data));
 }

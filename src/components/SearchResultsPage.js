@@ -22,9 +22,9 @@ export default class SearchResultsPage extends React.Component {
     }
 
     render() {
-        console.log('state', this.state);
         return (
             <div className="container">
+                <h2 style={{textAlign:'center', fontWeight:'700'}}> {`Search Results for ${this.props.match.params.query}`} </h2>
                 <div className="product-container">
                     <div className="product-container-inner">
                         {_.map(this.state.data, (item) => <Tile key={item.itemId} url={item.itemImage} title={item.itemTitle} price={item.price}
@@ -40,5 +40,4 @@ export default class SearchResultsPage extends React.Component {
 
 SearchResultsPage.propTypes = {
     match: PropTypes.object,
-    movies: PropTypes.object
 }

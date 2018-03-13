@@ -10,6 +10,11 @@ export default function hoemReducer(state=initialState, action){
 
         case actionTypes.SAVE_PRODUCTS : return {...state, products: action.data};
 
+        case actionTypes.START_LOADING : return {...state, isLoading: true} ;
+
+        case actionTypes.STOP_LOADING : return {...state, isLoading: false} ;
+
+
         default: return state;
     }
 }

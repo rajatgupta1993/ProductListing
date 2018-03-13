@@ -4,7 +4,6 @@ import { fetchProducts } from '../actions/actions';
 import Home from "../components/home";
 
 const mapStateToProps = (store) => {
-    console.log('store', store);
     return {
         products: store.homeReducer.products,
     };

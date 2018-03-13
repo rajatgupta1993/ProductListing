@@ -8,7 +8,6 @@ import FilterBox from './FilterBox';
 export default class home extends React.PureComponent {
   constructor() {
     super();
-    console.log(this, "this in Constructor ");
     this.state = {
       searchText: "",
       data:null, 
@@ -41,7 +40,7 @@ export default class home extends React.PureComponent {
   }
 
   onSorting(e){
-    console.log(e.target);
+    
     this.setState({sortingFilter: e.target.value});
     this.sortData(e.target.value)
   }
@@ -75,6 +74,7 @@ export default class home extends React.PureComponent {
 
   render() {
     const  products  = this.state.data;
+    
     return (
       <div>
         <div className="container">
@@ -101,6 +101,6 @@ export default class home extends React.PureComponent {
 }
 
 home.PropTypes = {
-  state: PropTypes.array,
-  fetchData: PropTypes.func
+  products: PropTypes.array,
+  fetchProducts: PropTypes.func
 };

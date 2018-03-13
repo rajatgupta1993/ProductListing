@@ -8,7 +8,7 @@ export default function FilterBox({ onSorting }) {
 
               <div style={{ float: 'right' }} onClick={onSorting}>
                   <label>
-                    <input type="radio" name="selection" value ="None"/>
+                    <input type="radio" name="selection" value ="None" />
                     None
                    </label>
 
@@ -34,7 +34,6 @@ export default function FilterBox({ onSorting }) {
 }
 
 FilterBox.propTypes = {
-  searchText: PropTypes.string,
-  onValueChange: PropTypes.func,
-  onSearchClicked: PropTypes.func
+  onSorting: PropTypes.func,
+ 
 };
